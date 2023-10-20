@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body bgcolor="#00FA9A">
+<form action="/homework/data" method="post">
+  <a>Тема обращения</a>
+  <select name="theme" required="required">
+    <option value="">Выберите вариант</option>
+    <option>Просто так</option>
+    <option>Не просто так</option>
+    <option>Проверяю домашнее задание</option>
+  </select><br>
+  <label>Введите ваше имя
+    <input type="text" name="fio">
+  </label><br>
+  <label for="name">Введите ваш номер телефона</label>
+  <input type="text" id="name" placeholder="+375291234567" name="tel"><br>
+  <label>Ведите адрес электронной почты
+    <input type="text" name="email">
+  </label><br>
+  <input type="submit" value="Отправить">
+</form>
+</body>
+</html>
