@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1" author="yuran">
+        <sql>
+            CREATE TABLE IF NOT EXISTS person (
+            id INT PRIMARY KEY AUTO_INCREMENT,
+            age INT DEFAULT 0,
+            person_name VARCHAR(100) NOT NULL,
+            surname VARCHAR(100) NOT NULL
+            );
+        </sql>
+    </changeSet>
+
+    <changeSet id="2" author="yuran">
+        <sql>
+            INSERT INTO person (age, person_name, surname) VALUES
+            (23, 'Nikolay', 'Nikolaev'),
+            (71, 'Evgeniy', 'Leonov'),
+            (38, 'Pavel', 'Priluchnyi');
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
