@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+<!--    <changeSet id="1" author="maria">-->
+<!--        <sql>-->
+<!--            CREATE TABLE OWNER(-->
+<!--            ID BIGINT PRIMARY KEY,-->
+<!--            PETS INT);-->
+<!--        </sql>-->
+<!--    </changeSet>-->
+<!--    <changeSet id="2" author="maria">-->
+<!--        <sql>-->
+<!--            CREATE TABLE car(-->
+<!--            id INT PRIMARY KEY AUTO_INCREMENT,-->
+<!--            model VARCHAR(64) NOT NULL,-->
+<!--            year INT NOT NULL,-->
+<!--            color VARCHAR(100),-->
+<!--            motor_info varchar(255));-->
+<!--        </sql>-->
+<!--    </changeSet>-->
+
+<!--    <changeSet id="3" author="maria">-->
+<!--        <sql>-->
+<!--            CREATE TABLE cat(-->
+<!--            id VARCHAR(255) PRIMARY KEY NOT NULL,-->
+<!--            cat_name VARCHAR(64) NOT NULL,-->
+<!--            owner_id INT REFERENCES owner(id));-->
+<!--        </sql>-->
+<!--    </changeSet>-->
+
+<!--    <changeSet id="4" author="maria">-->
+<!--        <sql>-->
+<!--            CREATE TABLE university(-->
+<!--            id INT PRIMARY KEY AUTO_INCREMENT,-->
+<!--            name VARCHAR(100) NOT NULL,-->
+<!--            faculties_number INT) ;-->
+<!--        </sql>-->
+<!--    </changeSet>-->
+
+<!--    <changeSet id="5" author="maria">-->
+<!--        <sql>-->
+<!--            CREATE TABLE rector(-->
+<!--            id int PRIMARY KEY AUTO_INCREMENT,-->
+<!--            university_id INT UNIQUE NOT NULL REFERENCES university(id),-->
+<!--            name VARCHAR(64) NOT NULL,-->
+<!--            experience INT );-->
+<!--        </sql>-->
+<!--    </changeSet>-->
+
+
+</databaseChangeLog>

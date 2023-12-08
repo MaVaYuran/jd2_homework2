@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hw4db_test</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="by.maria.task7.entity.Car"/>
+        <mapping class="by.maria.task7.entity.Owner"/>
+        <mapping class="by.maria.task7.entity.Cat"/>
+        <mapping class="by.maria.task910.entity.University"/>
+        <mapping class="by.maria.task910.entity.Rector"/>
+        <mapping class="by.maria.task910.entity.Writer"/>
+        <mapping class="by.maria.task910.entity.Book"/>
+        <mapping class="by.maria.task8.joined.entity.Employee1"/>
+        <mapping class="by.maria.task8.joined.entity.Person1"/>
+        <mapping class="by.maria.task8.joined.entity.Student1"/>
+        <mapping class="by.maria.task8.single_table.entity.Employee"/>
+        <mapping class="by.maria.task8.single_table.entity.Person"/>
+        <mapping class="by.maria.task8.single_table.entity.Student"/>
+        <mapping class="by.maria.task8.table_per_class.entity.Programer"/>
+        <mapping class="by.maria.task8.table_per_class.entity.Tester"/>
+        <mapping class="by.maria.task8.table_per_class.entity.User"/>
+        <mapping class="by.maria.task8.mapped.entity.BaseClass"/>
+        <mapping class="by.maria.task8.mapped.entity.InheritClass"/>
+    </session-factory>
+</hibernate-configuration>
