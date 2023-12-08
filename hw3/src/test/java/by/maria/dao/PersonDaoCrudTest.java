@@ -29,7 +29,7 @@ public class PersonDaoCrudTest {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         personDao = null;
     }
 
@@ -69,26 +69,27 @@ public class PersonDaoCrudTest {
     }
 
 
-//    @Test
-//    public void deletePersonById() throws SQLException, ClassNotFoundException {
-//        try (var session = PersonTestSessionFactory.getSessionFactory().openSession()) {
-//            var transaction = session.beginTransaction();
-//            Person person = new Person(32, "Grigor", "Dimitrov");
-//            int savedId = personDao.savePerson(person);
-//            transaction.commit();
+    @Test
+    public void deletePersonById() throws SQLException, ClassNotFoundException {
 
-//
-//            boolean result = personDao.deletePersonById(savedId);
-//            assertTrue(result);
-//
-//            var result1 = session.createNativeQuery(
-//                    " SELECT COUNT(*) FROM person WHERE id= " + savedId);
-//            int actualCount = result1.size();
-//            assertEquals(0, actualCount);
-//
-//
-//        }
-//    }
+        // Given
+        Person person = new Person(32, "Grigor", "Dimitrov");
+        int savedId = personDao.savePerson(person);
+
+        // When
+        boolean result = personDao.deletePersonById(savedId);
+
+        //Then
+        assertTrue(result);
+        try (Session session = PersonTestSessionFactory.getSessionFactory().openSession()) {
+            List<Long> query = session.createQuery(
+                    " SELECT count(*) FROM Person p WHERE p.name='Grigor'", Long.class).list();
+            System.out.println(query);
+            int actualCount = query.get(0).intValue();
+            assertEquals(0, actualCount);
+
+        }
+    }
 
     @Test
     public void readAll() {
@@ -113,8 +114,8 @@ public class PersonDaoCrudTest {
     @Test
     public void loadPerson() {
         Person person = new Person();
-        person.setAge(31);
-        person.setName("Pavel");
+        person.setAge(30);
+        person.setName("Igor");
         person.setSurname("Romanov");
 
         personDao.savePerson(person);
