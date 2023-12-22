@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:personDetail.properties"/>
+
+    <bean id="address" class="by.mariayun.task2.bean.Address">
+        <property name="street" value="${address.street}"/>
+        <property name="city" value="${address.city}"/>
+        <property name="country" value="${address.country}"/>
+        <property name="email" value="${address.email}"/>
+    </bean>
+    <bean id="person" class="by.mariayun.task2.bean.Person"
+         factory-method="getInstance"
+          init-method="personInit"
+          destroy-method="personDestroy">
+
+<!--        <constructor-arg ref="address"/>-->
+
+        <property name="address" ref="address"/>
+
+        <property name="age" value="${person.age}"/>
+        <property name="name" value="${person.name}"/>
+        <property name="surname" value="${person.surname}"/>
+
+    </bean>
+
+
+</beans>
