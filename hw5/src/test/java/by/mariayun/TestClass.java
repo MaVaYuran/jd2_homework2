@@ -27,6 +27,8 @@ public class TestClass {
         //then
         Customer1 customer = context1.getBean("customer1", Customer1.class);
         assertNotNull(customer);
+
+        context1.close();
     }
 
     @Test
@@ -38,6 +40,8 @@ public class TestClass {
         assertNotNull(byAccount);
         USDAccount usdAccount = context.getBean("USDAccount", USDAccount.class);
         assertNotNull(usdAccount);
+
+        context.close();
     }
 
     //Task2
@@ -50,6 +54,7 @@ public class TestClass {
         assertEquals("Sharapova", person.getSurname());
         assertEquals("Boston", person.getAddress().getCity());
 
+        context.close();
     }
 
     //Task89
@@ -62,6 +67,8 @@ public class TestClass {
         assertNotNull(customer);
         assertNotNull("cardUSD", CardUSD.class);
         assertNotNull("cardBY", CardBY.class);
+
+        context.close();
 
     }
 }
