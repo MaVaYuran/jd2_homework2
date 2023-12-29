@@ -1,3 +1,7 @@
+package by.mariayun;
+
+import by.mariayun.task7.DBConnection;
+
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.ResultSet;

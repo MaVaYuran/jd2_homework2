@@ -1,6 +1,8 @@
-package by.mariayun.task8910.bean;
+package by.mariayun.task89.bean;
 
-//@Component
+import org.springframework.stereotype.Component;
+
+@Component
 public class CardBY implements ICard{
 
     @Override

@@ -1,4 +1,4 @@
-package task7;
+package by.mariayun.task7;
 
 public class Receiver {
     private  int id;

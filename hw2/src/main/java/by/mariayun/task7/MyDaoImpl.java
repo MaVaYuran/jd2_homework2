@@ -1,4 +1,4 @@
-package task7;
+package by.mariayun.task7;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

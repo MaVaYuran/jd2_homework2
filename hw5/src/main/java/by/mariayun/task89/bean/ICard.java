@@ -1,4 +1,4 @@
-package by.mariayun.task8910.bean;
+package by.mariayun.task89.bean;
 
 public interface ICard {
     String withdrawMoney(double sum);

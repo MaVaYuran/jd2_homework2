@@ -1,6 +1,6 @@
-package by.mariayun.task8910;
+package by.mariayun.task89;
 
-import by.mariayun.task8910.bean.Customer;
+import by.mariayun.task89.bean.Customer;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestCustomer {

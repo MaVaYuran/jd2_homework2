@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
@@ -39,8 +40,12 @@ public class CountingServlet extends HttpServlet {
     }
 
     public void writeToFile(Integer visits) throws IOException {
-        Path file = Path.of("C:/jd2_homework/src/main/resources/count1.txt");
-        Files.write(file, visits.toString().getBytes());
+        String userHomeDir = System.getProperty("user.home");
+        String counterFileDir = userHomeDir + File.separator + "task9";
+        new File(counterFileDir).mkdirs();
+        String counterFilePath = counterFileDir + File.separator + "count1.txt";
+       // Path file = Path.of("C:/jd2_homework/src/main/resources/count1.txt");
+        Files.write(Path.of(counterFilePath), visits.toString().getBytes());
 
     }
 }
